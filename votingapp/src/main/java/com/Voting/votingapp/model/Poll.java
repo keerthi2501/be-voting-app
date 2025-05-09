@@ -20,8 +20,41 @@ public class Poll {
   private String question;
 
   @ElementCollection
-  private List<String> options = new ArrayList<>();
+  private List<OptionVote> options = new ArrayList<>();
 
-  @ElementCollection
-  private List<Long> votes = new ArrayList<>();
+//  @ElementCollection
+//  private List<Long> votes = new ArrayList<>();
+
+  public List<OptionVote> getOptions() {
+    return options;
+  }
+
+  public void setOptions(List<OptionVote> options) {
+    this.options = options;
+  }
+
+  public String getQuestion() {
+    return question;
+  }
+
+  public void setQuestion(String question) {
+    this.question = question;
+  }
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+
+//  public List<Long> getVotes() {
+//    return votes;
+//  }
+//
+//  public void setVotes(List<Long> votes) {
+//    this.votes = votes;
+//  }
 }

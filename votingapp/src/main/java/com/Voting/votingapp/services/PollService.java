@@ -2,6 +2,7 @@ package com.Voting.votingapp.services;
 
 import com.Voting.votingapp.model.Poll;
 import com.Voting.votingapp.repositories.PollRepository;
+import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -12,8 +13,13 @@ public class PollService {
     this.pollRepository = pollRepository;
   }
 
-  public static Poll createPoll(Poll poll){
-    return pollRepository.save(poll);
+  public Poll createPoll(Poll poll){
+    Poll record = pollRepository.save(poll);
+    return record;
+  }
+
+  public List<Poll> gettAllPolls(){
+    return pollRepository.findAll();
   }
 
 }
