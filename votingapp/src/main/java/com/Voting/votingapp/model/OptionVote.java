@@ -8,23 +8,27 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Embeddable
 public class OptionVote {
-  private String VoteOption;
-
-  public Long getVoteCount() {
-    return voteCount;
-  }
-
-  public void setVoteCount(Long voteCount) {
-    this.voteCount = voteCount;
-  }
-
-  public String getVoteOption() {
-    return VoteOption;
-  }
-
-  public void setVoteOption(String voteOption) {
-    VoteOption = voteOption;
-  }
-
+  private String optionText;
   private Long voteCount = 0L;
+
+  //Now the getters and setts are not required as the lambok is properly configured now.
+
+
+//
+//  public Long getVoteCount() {
+//    return voteCount;
+//  }
+//
+//  public void setVoteCount(Long voteCount) {
+//    this.voteCount = voteCount;
+//  }
+//
+//  public String getVoteOption() {
+//    return VoteOption;
+//  }
+//
+//  public void setVoteOption(String voteOption) {
+//    VoteOption = voteOption;
+//  }
+
 }
